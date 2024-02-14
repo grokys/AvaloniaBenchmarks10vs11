@@ -32,6 +32,16 @@ namespace Avalonia.Benchmarks
                 args = a.ToArray();
             }
 
+            AppBuilder.Configure<Application>()
+#if AVALONIA10
+                .UseHeadless(headlessDrawing: false)
+                .UseSkia()
+#else
+                .UseHeadless(new() { UseHeadlessDrawing = false })
+                .UseSkia()
+#endif
+                .SetupWithoutStarting();
+
             benchmarkSwitcher.Run(args, config);
         }
     }
