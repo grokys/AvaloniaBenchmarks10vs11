@@ -19,16 +19,20 @@ namespace BenchmarksShared
         };
 
         [GlobalSetup]
-        public void SetupSkia()
+        public void Setup()
         {
             AppBuilder.Configure<Application>()
 #if AVALONIA10
-                .UseHeadless(headlessDrawing: true)
+                .UseHeadless(headlessDrawing: false)
+                .UseSkia()
 #else
-                .UseHeadless(new() { UseHeadlessDrawing = true })
+                .UseHeadless(new() { UseHeadlessDrawing = false })
+                .UseSkia()
 #endif
                 .SetupWithoutStarting();
-            _rtb = new RenderTargetBitmap(new(1000, 1000));
+            _rtb = new RenderTargetBitmap(new(100, 100));
+            _rectangle.Measure(Size.Infinity);
+            _rectangle.Arrange(new(_rectangle.DesiredSize));
         }
 
         [Benchmark]
@@ -37,8 +41,7 @@ namespace BenchmarksShared
             for (var i = 0; i < 100; i++)
             {
                 _rtb.Render(_rectangle);
-                _rectangle.Width++;
-                _rectangle.Height++;
+                _rtb.Save(@"d:\temp\output.png");
             }
         }
     }

@@ -14,6 +14,7 @@
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.22" />
     <PackageReference Include="Avalonia.Headless" Version="0.10.22" />
+    <PackageReference Include="Avalonia.Skia" Version="0.10.22" />
     <PackageReference Include="BenchmarkDotNet" Version="0.13.12" />
   </ItemGroup>
 
