@@ -6,13 +6,15 @@
     <SharedGUID>41ecd6f0-d971-4a5e-9695-055d6ca1372a</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>BenchmarksShared</Import_RootNamespace>
+    <Import_RootNamespace>AvaloniaBenchmarks</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AvaloniaObject_GetValue.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AvaloniaObject_SetValue.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Binding_Setup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Binding_Values.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Program.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Shapes_Rendering.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TestTypes.cs" />
   </ItemGroup>
 </Project>

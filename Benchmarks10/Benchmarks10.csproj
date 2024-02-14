@@ -4,12 +4,16 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AvaloniaBenchmarks</RootNamespace>
+    <DefineConstants>$(DefineConstants);AVALONIA10</DefineConstants>
   </PropertyGroup>
 
   <Import Project="..\BenchmarksShared\BenchmarksShared.projitems" Label="Shared" />
 
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.22" />
+    <PackageReference Include="Avalonia.Headless" Version="0.10.22" />
     <PackageReference Include="BenchmarkDotNet" Version="0.13.12" />
   </ItemGroup>
 

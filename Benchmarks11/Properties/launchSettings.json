@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Benchmarks11": {
+      "commandName": "Project",
+      "commandLineArgs": "--debug"
+    }
+  }
+}
