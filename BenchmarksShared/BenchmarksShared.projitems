@@ -14,7 +14,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Binding_Setup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Binding_Values.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Program.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DrawingContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DrawingContext_DrawRectangle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TestTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Text_Rendering.cs" />
   </ItemGroup>
 </Project>
