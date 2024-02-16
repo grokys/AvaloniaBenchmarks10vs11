@@ -48,34 +48,5 @@ namespace AvaloniaBenchmarks
                 }
             }
         }
-
-//        [Benchmark]
-//        public void DrawText_Short()
-//        {
-//            for (var y = 0; y < 10; y++)
-//            {
-//                for (var x = 0; x < 10; x++)
-//                {
-//#if AVALONIA10
-//                    var text = new TextLayout(
-//                        $"{x},{y}",
-//                        typeface,
-//                        48,
-//                        Brushes.Black);
-
-//                    using var push = _drawingContext.PushPostTransform(Matrix.CreateTranslation(x * 100, y * 100));
-//                    text.Draw(_drawingContext);
-//#else
-//                    var text = new TextLayout(
-//                        $"{x},{y}",
-//                        typeface,
-//                        48,
-//                        Brushes.Black);
-
-//                    text.Draw(_drawingContext, new Point(x * 100, y * 100));
-//#endif
-//                }
-//            }
-//        }
     }
 }
